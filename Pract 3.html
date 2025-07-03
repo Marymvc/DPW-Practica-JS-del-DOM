@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cambiar color de texto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        select {
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        #colorText {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>3. Cambiar color de texto según elección</h1>
+    <select id="colorSelect">
+        <option value="">Selecciona un color</option>
+        <option value="red">Rojo</option>
+        <option value="blue">Azul</option>
+        <option value="green">Verde</option>
+        <option value="purple">Morado</option>
+        <option value="orange">Naranja</option>
+    </select>
+    <p id="colorText">Este texto cambia de color.</p>
+
+    <script>
+        const colorSelect = document.getElementById('colorSelect');
+        const colorText = document.getElementById('colorText');
+
+        colorSelect.addEventListener('change', function() {
+            colorText.style.color = this.value;
+        });
+    </script>
+</body>
+</html>

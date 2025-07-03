@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mostrar números pares</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        button {
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        #result {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+        }
+        input {
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>2. Mostrar números pares de 1 a N</h1>
+    <input type="number" id="numberInput" placeholder="Ingresa un número" value="25" min="1">
+    <button id="showButton">Mostrar Pares</button>
+    <div id="result"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const showButton = document.getElementById('showButton');
+            const numberInput = document.getElementById('numberInput');
+            const resultDiv = document.getElementById('result');
+
+            showButton.addEventListener('click', function() {
+                const n = parseInt(numberInput.value);
+                
+                if (isNaN(n) || n < 1) {
+                    resultDiv.textContent = "Por favor ingresa un número válido mayor que 0";
+                    return;
+                }
+
+                let evenNumbers = [];
+                for (let i = 2; i <= n; i += 2) {
+                    evenNumbers.push(i);
+                }
+                
+                if (evenNumbers.length === 0) {
+                    resultDiv.textContent = "No hay números pares en el rango especificado";
+                } else {
+                    resultDiv.textContent = "Números pares: " + evenNumbers.join(', ');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

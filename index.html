@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito de Compras</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Productos Disponibles</h1>
+
+  <div class="productos">
+    <div class="producto">
+      <h2>🍕 Pizza</h2>
+      <p>Precio: Bs 40</p>
+      <button onclick="agregarProducto('Pizza', 40)">Agregar</button>
+    </div>
+    <div class="producto">
+      <h2>🍔 Hamburguesa</h2>
+      <p>Precio: Bs 25</p>
+      <button onclick="agregarProducto('Hamburguesa', 25)">Agregar</button>
+    </div>
+    <div class="producto">
+      <h2>🥤 Refresco</h2>
+      <p>Precio: Bs 10</p>
+      <button onclick="agregarProducto('Refresco', 10)">Agregar</button>
+    </div>
+  </div>
+
+  <h2>🛒 Carrito</h2>
+  <div id="carrito"></div>
+  <p id="total">Total: Bs 0</p>
+
+  <script src="script.js"></script>
+</body>
+</html>

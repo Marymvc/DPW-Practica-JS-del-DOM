@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contar caracteres</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #characterCount {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>1. Contar caracteres en un input</h1>
+    <input type="text" id="textInput" placeholder="Escribe algo..." value="Quia provident eaqu">
+    <p>Caracteres: <span id="characterCount">19</span></p>
+
+    <script>
+        const textInput = document.getElementById('textInput');
+        const characterCount = document.getElementById('characterCount');
+
+        textInput.addEventListener('input', function() {
+            characterCount.textContent = this.value.length;
+        });
+    </script>
+</body>
+</html>
